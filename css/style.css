@@ -1,0 +1,191 @@
+/* Reset basique */
+
+:root {
+    --nav-bg-color : #000;
+    --even-section-bg-color : #f7e3db;
+    --dark-bg-text-color : #ede1c6;
+    --height : 100vh;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background-color: #fff;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Navigation */
+header {
+    background-color: #e0e0e0;
+    padding: 0 0px; /* On met le padding vertical à 0 pour que le logo puisse toucher les bords */
+    height: 80px;    /* On définit une hauteur fixe pour la navbar */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color : var(--nav-bg-color);
+}
+
+.logo-container {
+    height: 100%;    /* Le conteneur prend toute la hauteur */
+    display: flex;
+    align-items: center;
+}
+
+.logo-small {
+    height: 100%;    /* Le logo prend 100% de la hauteur de la navbar */
+    width: auto;     /* Garde les proportions de l'image */
+    display: block;  /* Enlève l'espace vide sous l'image */
+    border: none;    /* Optionnel : retire la bordure si tu n'en veux plus */
+    align-self: left;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    /* 1. On dit à la liste de prendre tout l'espace restant */
+    flex: 1; 
+    /* 2. On répartit les éléments (li) uniformément */
+    justify-content: space-around; 
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-bg-text-color);
+    font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url("../images/photo-j3.png");
+    aspect-ratio: 16/9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    color : var(--dark-bg-text-color);
+}
+
+/* Section Intro */
+.intro-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height : var(--height);
+    background-color: var(--even-section-bg-color);
+}
+
+.left-text{
+    text-align:left;
+}
+
+.right-text{
+    text-align:right;
+}
+
+.vert-img {
+    height : 15em;
+}
+
+.intro-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Programme */
+
+.programme{
+    height : var(--height);
+}
+
+.programme h2, .theme h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.moments-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 30px;
+}
+
+.moment img {
+    width: 100px;
+    height: 100px;
+    background-color: #9e9e9e;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.moment p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.plus-infos {
+    display: block;
+    margin-top: 20px;
+    color: #000;
+    text-decoration: none;
+    font-style: italic;
+}
+
+/* Thème */
+
+.theme{
+    height : var(--height);
+}
+.big-lorem {
+    font-size: 5rem;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--nav-bg-color);
+    color: var(--dark-bg-text-color);
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.logo-footer {
+    width: 60px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.contact {
+    font-size: 0.9rem;
+}
