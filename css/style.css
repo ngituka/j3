@@ -82,12 +82,28 @@ nav ul li a {
 }
 
 .countdown {
-    font-size: 2.5rem;
     font-weight: normal;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
     color : var(--dark-bg-text-color);
     background-color: var(--bg-color);
     text-align: center;
     padding:0;
+    margin: auto;
+}
+
+@media (min-width : 470px){
+    .countdown{
+        max-width: 90%;
+    }
+}
+
+.time{
+    font-size:10vw;
+}
+
+.indicator{
+    font-size:5vw;
 }
 
 /* Section Intro */
