@@ -138,14 +138,45 @@ nav ul li a {
 
 
 .moment img {
-    width: 100px;
-    background-color: #fff;
+    width: 25vw;
 }
 
-.moment p {
-    margin-top: 10px;
-    font-size: 1.2rem;
+.moment img:hover{
+        width:calc(100% + 1vw);
+        transition: 20ms;
+    }
+
+.horaire{
+    font-size: 10vw;
 }
+
+.event{
+    font-size:6vw;
+}
+
+@media (min-width:750px){
+    .moments-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5vw;
+        max-width: 85%;
+        margin: auto;
+    }
+
+    .moment img {
+        width: 20vw;
+    }
+
+    .moment img:hover{
+        width:calc(100% + 1vw);
+        transition: 20ms;
+    }
+
+    .event{
+        font-size:2vw;
+    }
+}
+
 
 .plus-infos {
     display: block;
