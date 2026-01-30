@@ -118,18 +118,29 @@ nav ul li a {
 /* Section Intro */
 .intro-section {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
 }
 
 .vert-img {
-    height : 15em;
+    height : 50vw;
     margin:auto;
 }
 
-.intro-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+.texte{
+    font-style: italic;
+    font-size: 3vw;
+}
+
+.verset{
+    text-align: left;
+}
+
+.reference{
+    text-decoration: underline;
+    text-align: right;
+    font-size: 2.5vw;
 }
 
 /* Programme */
