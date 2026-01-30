@@ -9,7 +9,7 @@
     --border-width : 1px;
     --border-color : white;
     --title-font-size : 10vw;
-
+    --avg-text-size : 4vw;
     /*nav*/
     --nav-font-size : 1.1rem;
 
@@ -159,16 +159,16 @@ h2 {
     font-size:6vw;
 }
 
-.infos{
+button{
     background-color: var(--button-bg-color);
     border: none;
-    border-radius: 5%;
     padding: 1vw 1.5vw;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    margin-top:5vw
+    margin-top:5vw;
+    font-size: var(--avg-text-size);
 }
 
 @media (min-width:750px){
@@ -205,15 +205,35 @@ h2 {
 
 /* Thème */
 
-.theme{
-    height : var(--section-height);
-}
+
 .big-lorem {
     font-size: 5rem;
     font-weight: normal;
     margin: 20px 0;
 }
 
+.collapsible{
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    padding: 4.5vw 1vw 4.5vw;
+}
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.content{
+    transition: max-height 0.2s ease-out;
+    max-height: 0;
+    overflow: hidden;
+    text-align:left;
+    font-size: var(--avg-text-size);
+}
 
 /* Footer */
 footer {

@@ -37,3 +37,13 @@ function getTime(){
     document.querySelector(".secs").innerHTML = seconds;
 }   
 setInterval(getTime, 1000);
+
+function toggleTheme(){
+    console.log("clic reçu !");
+    x = document.querySelector(".content");
+    if (x.style.maxHeight){
+      x.style.maxHeight = null;
+    } else {
+      x.style.maxHeight = x.scrollHeight + "px";
+    }
+}
