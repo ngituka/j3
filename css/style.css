@@ -5,9 +5,14 @@
     --bg-color : #000;
     --dark-bg-text-color : #ede1c6;
     --section-height : 60vh;
+    --button-bg-color : #ede1c6;
+    --border-width : 1px;
+    --border-color : white;
+    --title-font-size : 10vw;
 
     /*nav*/
     --nav-font-size : 1.1rem;
+
 }
 * {
     margin: 0;
@@ -26,6 +31,12 @@ body {
     margin: 0 auto;
     padding: 40px 20px;
     text-align: center;
+}
+
+section{
+    border-bottom : solid var(--border-color);
+    padding-bottom: 5vw;
+    border-width: var(--border-width);
 }
 
 /* Navigation */
@@ -75,8 +86,6 @@ nav ul li a {
 
 /* Hero Section */
 
-
-
 .hero img{
     width:100%;
 }
@@ -111,7 +120,6 @@ nav ul li a {
     display: grid;
     justify-content: center;
     align-items: center;
-    height : var(--section-height);
 }
 
 .vert-img {
@@ -131,20 +139,18 @@ nav ul li a {
     max-width: 100%;
 }
 
-.programme h2, .theme h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
+h2 {
+    font-size: var(--title-font-size);
 }
 
-
+.moment{
+    border-bottom: solid var(--border-color);
+    border-width: var(--border-width);
+    padding : 5vw;
+}
 .moment img {
     width: 25vw;
 }
-
-.moment img:hover{
-        width:calc(100% + 1vw);
-        transition: 20ms;
-    }
 
 .horaire{
     font-size: 10vw;
@@ -152,6 +158,18 @@ nav ul li a {
 
 .event{
     font-size:6vw;
+}
+
+.infos{
+    background-color: var(--button-bg-color);
+    border: none;
+    border-radius: 5%;
+    padding: 1vw 1.5vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-top:5vw
 }
 
 @media (min-width:750px){
@@ -167,11 +185,6 @@ nav ul li a {
         width: 20vw;
     }
 
-    .moment img:hover{
-        width:calc(100% + 1vw);
-        transition: 20ms;
-    }
-
     .event{
         font-size:2vw;
     }
@@ -184,6 +197,7 @@ nav ul li a {
     text-decoration: none;
     font-style: italic;
     color : inherit;
+    cursor:pointer;
 }
 
 
