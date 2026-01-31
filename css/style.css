@@ -1,30 +1,33 @@
 /* Reset basique */
 
-:root {
-    /*colors*/
-    --bg-color : #000;
-    --dark-bg-text-color : #ede1c6;
-    --button-bg-color : #ede1c6;
-    --section-height : 60vh;
-    --border-color : white;
-    
-    /*font sizes*/
-    --bigger-text-size : 10vw;
-    --big-text-size : 6vw;
-    --avg-text-size : 4vw;
-
-    /*img sizes*/
-    --logo-size : 3rem;
-
-    /*other*/
-    --border-width : 1px;
-    
-    
-   
-    /*nav*/
-    
-
+:root{  
+    --bg-color: #dfccb2;
+    --font-color: #664c2f;
+    --button-bg-color: #664c2f;
+    --section-height: 60vh;
+    --border-color: white;
+    --bigger-text-size: 10vw;
+    --big-text-size: 6vw;
+    --avg-text-size: 4vw;
+    --logo-size: 3rem;
+    --border-width: 1px;
 }
+
+@font-face {
+    font-family: dynalight;
+    src: url(../Dynalight/Dynalight-Regular.ttf);
+    font-size: larger;
+}
+
+@font-face {
+    font-family: ebg;
+    src: url(../EB_Garamond/EBGaramond-VariableFont_wght.ttf)
+}
+
+.fancy{
+    font-family: dynalight;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -32,9 +35,9 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: ebg;
     line-height: 1.6;
-    color: var(--dark-bg-text-color);
+    color: var(--font-color);
     background-color: var(--bg-color);
     font-size: var(--avg-text-size);
 }
@@ -81,7 +84,7 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--dark-bg-text-color);
+    color: var(--font-color);
 }
 
 
@@ -95,7 +98,7 @@ nav ul li a {
     font-weight: normal;
     display:grid;
     grid-template-columns: repeat(4, 1fr);
-    color : var(--dark-bg-text-color);
+    color : var(--font-color);
     background-color: var(--bg-color);
     text-align: center;
     padding:0;
@@ -167,15 +170,19 @@ h2 {
 }
 
 button{
-    background-color: var(--button-bg-color);
+    background: var(--button-bg-color);
     border: none;
-    padding: 1vw 1.5vw;
-    text-align: center;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    margin-top:5vw;
     font-size: var(--avg-text-size);
+    color: var(--bg-color);
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    padding: 4.5vw 1vw 4.5vw;
+    font-family: inherit;
+    
 }
 
 @media (min-width:750px){
@@ -227,33 +234,37 @@ button{
 }
 
 .collapsible:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  color: white;
+  content: '+'; /* Unicode character for "plus" sign (+) */
   float: right;
   margin-left: 5px;
+  color:var(--bg-color);
 }
 
 .content{
     transition: max-height 0.2s ease-out;
     max-height: 0;
-    overflow: hidden;
     text-align:left;
     font-size: var(--avg-text-size);
+    color: var(--bg-color);
+    background: var(--button-bg-color);
+    border-top: solid 1px;
+    padding: 0 0.5em 0;
+    padding-top: 0px;
+    padding-right: 0.5em;
+    padding-bottom: 0px;
+    padding-left: 0.5em;
 }
 
 /* Footer */
 footer {
     background-color: var(--bg-color);
-    color: var(--dark-bg-text-color);
+    color: var(--font-color);
     text-align: center;
     padding: 40px 0;
-    margin-top: 50px;
 }
 
 .logo-footer {
     width: 60px;
-    border: 1px solid #000;
-    margin-bottom: 20px;
 }
 
 
