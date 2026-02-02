@@ -63,6 +63,12 @@ nav {
     background-color : var(--bg-color);
 }
 
+@media (min-width:470px){
+    nav{
+        border-bottom: solid var(--border-width) var(--border-color);
+    }
+}
+
 .logo-small {
     height: var(--logo-size);    /* Le logo prend 100% de la hauteur de la navbar */
     width: auto;     /* Garde les proportions de l'image */
@@ -89,15 +95,9 @@ nav ul li a {
 
 
 /* Hero Section */
-
-.hero img{
-    width:100%;
-}
-
 .countdown {
     font-weight: normal;
     display:grid;
-    grid-template-columns: repeat(4, 1fr);
     color : var(--font-color);
     background-color: var(--bg-color);
     text-align: center;
@@ -105,15 +105,53 @@ nav ul li a {
     margin: auto;
 }
 
+.hero img{
+    margin:auto;
+}
+
 @media (min-width : 470px){
     .countdown{
         max-width: 90%;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: none;
+    }
+
+    .hero{
+        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+    }
+
+    .hero img{
+        width:90%;
+        margin: 40px auto 40px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .time{
+        font-size: 3vw;
+    }
+
+    .indicator{
+        font-size:2vw;
     }
 }
 
-.time{
-    font-size: var(--bigger-text-size)
+@media (max-width:470px){
+    .hero img{
+        width:100%;
+    }
+
+    .countdown {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .time{
+        font-size: var(--bigger-text-size);
+    }
 }
+
+
 
 /* Section Intro */
 .intro-section {
