@@ -234,7 +234,7 @@ button{
 }
 
 .collapsible:after {
-  content: '+'; /* Unicode character for "plus" sign (+) */
+  content: '+';
   float: right;
   margin-left: 5px;
   color:var(--bg-color);
@@ -253,6 +253,7 @@ button{
     padding-right: 0.5em;
     padding-bottom: 0px;
     padding-left: 0.5em;
+    overflow:hidden;
 }
 
 /* Footer */
