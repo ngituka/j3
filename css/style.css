@@ -11,6 +11,9 @@
     --avg-text-size: 4vw;
     --logo-size: 3rem;
     --border-width: 1px;
+
+    /*responsive : petites tailles de pilice*/
+    --small-screen-avg-font-size : 3vw;
 }
 
 @font-face {
@@ -129,7 +132,7 @@ nav ul li a {
     }
 
     .time{
-        font-size: 3vw;
+        font-size: var(--small-screen-avg-font-size);
     }
 
     .indicator{
@@ -172,6 +175,12 @@ nav ul li a {
 
 .verset{
     text-align: left;
+}
+
+@media (min-width:470px){
+    .texte{
+        font-size: var(--small-screen-avg-font-size);
+    }
 }
 
 .reference{
