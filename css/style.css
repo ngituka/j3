@@ -15,6 +15,7 @@
     /*responsive : petites tailles de pilice*/
     --small-screen-avg-font-size : 3vw;
     --small-screen-big-font-size : 7vw;
+    --small-screen-small-font-size : 2vw;
 }
 
 @font-face {
@@ -242,6 +243,11 @@ button{
     h2, horaire{
         font-size:var(--small-screen-big-font-size);
     }
+
+    button{
+        padding: 2.5vw 1vw 2.5vw;
+        font-size : var(--small-screen-small-font-size);
+    }
 }
 
 @media (min-width:750px){
@@ -282,7 +288,6 @@ button{
     width: 100%;
     margin: auto;
     text-align: left;
-    padding: 4.5vw 1vw 4.5vw;
 }
 
 .collapsible:after {
