@@ -335,6 +335,12 @@ footer {
     padding: 40px 0;
 }
 
+@media (min-width:470px){
+    footer{
+        font-size:var(--small-screen-small-font-size)
+    }
+}
+
 .logo-footer {
     width: 60px;
 }
