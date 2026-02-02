@@ -15,6 +15,7 @@
     /*responsive : petites tailles de pilice*/
     --small-screen-avg-font-size : 3vw;
     --small-screen-big-font-size : 7vw;
+    --small-screen-bigger-font-size : 8vw;
     --small-screen-small-font-size : 2vw;
 }
 
@@ -284,6 +285,13 @@ button{
     margin: 20px 0;
 }
 
+@media (min-width:470px){
+    .big-lorem{
+        font-size: var(--small-screen-bigger-font-size);
+    }
+    
+}
+
 .collapsible{
     width: 100%;
     margin: auto;
@@ -311,6 +319,12 @@ button{
     padding-bottom: 0px;
     padding-left: 0.5em;
     overflow:hidden;
+}
+
+@media (min-width:470px){
+    .content{
+        font-size: var(--small-screen-small-font-size);
+    }
 }
 
 /* Footer */
