@@ -14,6 +14,7 @@
 
     /*responsive : petites tailles de pilice*/
     --small-screen-avg-font-size : 3vw;
+    --small-screen-big-font-size : 7vw;
 }
 
 @font-face {
@@ -199,6 +200,8 @@ h2 {
     font-weight: initial;
 }
 
+
+
 .moment{
     border-bottom: solid var(--border-color);
     border-width: var(--border-width);
@@ -208,9 +211,12 @@ h2 {
     width: 25vw;
 }
 
-.horaire{
-    font-size: var(--bigger-text-size);
+@media (max-width:470px){
+    .horaire{
+        font-size: var(--bigger-text-size);
+    }
 }
+
 
 .event{
     font-size:var(--big-text-size);
@@ -230,6 +236,12 @@ button{
     padding: 4.5vw 1vw 4.5vw;
     font-family: inherit;
     
+}
+
+@media (min-width:470px){
+    h2, horaire{
+        font-size:var(--small-screen-big-font-size);
+    }
 }
 
 @media (min-width:750px){
@@ -254,14 +266,7 @@ button{
 }
 
 
-.plus-infos {
-    display: block;
-    margin-top: 20px;
-    text-decoration: none;
-    font-style: italic;
-    color : inherit;
-    cursor:pointer;
-}
+
 
 
 /* Thème */
